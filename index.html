@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live code chal 7</title>
+    <style>
+        body{
+            height: 25vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .success-msg{
+            color: green;
+        }
+        .error-msg{
+            color: red;
+        }
+        .btn{
+            background-color: rgb(1, 1, 48);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <label for="password">Enter a password</label>
+        <input type="password" id="password" value="">
+        <div class="msg" id="msg"></div>
+        <button class="btn" id="btn" >Submit</button>
+    </main>
+    <script>
+        const inputEl = document.getElementById("password");
+        const msgEl = document.getElementById("msg");
+        const btnEl = document.getElementById("btn");
+        
+        function btnFunc(){
+            if(inputEl.value.length < 10){
+                msgEl.innerText = "Error";
+                inputEl.style.border = "2px solid red";
+            }else{
+                msgEl.innerText = "Success";
+                inputEl.style.border = "2px solid green";
+            }
+        }
+
+        btnEl.addEventListener("click", btnFunc);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
